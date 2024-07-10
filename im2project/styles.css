@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50%;
+    max-height: 80vh; /* Limit the maximum height */
+    overflow-y: auto; /* Allow scrolling within the container if needed */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* index.php - login and register logo */
+.l-image-section {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+}
+.r-image-section {
+    flex: 1;
+    max-width: 40%;
+    position: relative;
+}
+.l-image-section img, .r-image-section img {
+    max-width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+
+/* index.php - form format */
+#Login, #Register, #ForgotPassword {
+    flex: 1;
+    padding: 20px;
+}
+
+h2 {
+    color: #12229D;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+/*index.php - buttons and links for form submission */
+.bookappbtn, 
+.loginbtn, 
+.registerbtn, 
+.forgotpassbtn, 
+.updatebtn, 
+.apphistorybtn {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 50px;
+    background-color: #12229D;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+}
+.registerbtn {
+    margin-top: 10px;
+}
+.bookappbtn {
+    margin-bottom: 10px;
+}
+.loginbtn:hover, 
+.registerbtn:hover, 
+.forgotpassbtn:hover, 
+.bookappbtn:hover,
+.updatebtn:hover,
+.apphistorybtn:hover {
+    background-color: #2f40c2;
+}
+.registerlink, .loginlink, .forgot-password a, .return-link {
+    color: #007bff;
+    text-decoration: none;
+}
+.registerlink:hover, .loginlink:hover, .forgot-password a:hover, .return-link:hover {
+    text-decoration: underline;
+}
+
+/* index.php - date of birth placeholder */
+#dob:empty::before {
+    content: "Date of Birth";
+    color: #888;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* index.php = forgot password */ 
+.forgot-password {
+    margin-bottom: 20px;
+    text-align: left;
+}
+#ForgotPassword h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+#ForgotPassword .reset-method {
+    margin-bottom: 10px; /* Adjust spacing between radio buttons */
+}
+#ForgotPassword input[type="email"],
+#ForgotPassword input[type="tel"],
+#Register input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+#ForgotPassword p {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+#ForgotPassword .loginlink {
+    color: #007bff;
+    text-decoration: none;
+}
+#ForgotPassword .loginlink:hover {
+    text-decoration: underline;
+}
+
+
+/* index.php - show password */
+.show-password-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin-top: -5px;
+}
+.show-password-container input[type="checkbox"] {
+    margin-right: 8px; /* Adjust spacing between checkbox and label */
+    vertical-align: middle;
+}
+.password-error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: -8px;
+    margin-bottom: 15px;
+}
+.error {
+    color: red;
+    font-size: 0.8em;
+    margin-bottom: 15px;
+}
+
+
+/* landing_page.php - navbar*/
+.navbar {
+    position: fixed; /* or use absolute if preferred */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* ensure it's above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa; /* example background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar .navbar-brand img {
+    height: 100px; /* adjust height as needed */
+    /* optional: add margin or padding for spacing */
+}
+.navbar .profile-icon {
+    font-size: 1.8rem;
+    color: #12229D; /* icon color */
+    margin-right: 50px;
+    /* optional: add padding or margin for spacing */
+}
+.navbar .profile-icon:hover {
+    font-size: 1.8rem;
+    color: #2f40c2; /* icon color */
+    margin-right: 50px;
+    /* optional: add padding or margin for spacing */
+}
+
+
+/* landing_page.php - welcome message */
+.welcome-message {
+    display: flex;
+    left: 0;
+}
+.greeting h1 {
+    flex: 1;
+    color: #fff;
+}
+.last-login {
+    flex: 1;
+    font-size: 0.8em;
+    color: #fff;
+    padding-top: 25px;
+    margin-left: 10px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: -30px 30px 0;
+}  
+.appointment-container {
+    padding: 30px;
+    background-color: #f8f9fa; /* example background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    border-radius: 10px;
+}
+
+
+/* Profile dropdown container */
+.profile-container {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #12229D;
+    color: #fff;
+}
+
+
+/* app_history.php */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.table th {
+    background-color: #f8f9fa;
+}
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+.btn {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 4px;
+    background-color: #12229D;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #2f40c2;
+}
